@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拼拼——带你吃遍全北京</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    拼拼——带你吃遍全北京，以下即为产品展示页面
+    <!-- inject:css-->
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/daterangepicker.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/footable.standalone.min.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/fullcalendar@5.2.0.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/jquery-jvectormap-2.0.5.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/leaflet.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/MarkerCluster.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/select2.min.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/slick.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/star-rating-svg.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/trumbowyg.min.css">
+    <link rel="stylesheet" href="../static/assets/vendor_assets/css/wickedpicker.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- endinject -->
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+</head>
+
+<body class="layout-light side-menu overlayScroll">
+<div class="mobile-search">
+    <form class="search-form">
+        <span data-feather="search"></span>
+        <input class="form-control mr-sm-2 box-shadow-none" type="text" placeholder="Search...">
+    </form>
+</div>
+
+<div class="mobile-author-actions"></div>
+<main class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="shop-breadcrumb">
+
+                    <div class="breadcrumb-main">
+                        <h4 class="text-capitalize breadcrumb-title">产品</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="products_page product_page--grid mb-30">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="columns-1 col-lg-4 col-md-5 col-sm-8 order-md-0 order-1">
+                    <div class="widget">
+                        <div class="widget-header-title px-20 py-15 border-bottom">
+                            <h6 class="d-flex align-content-center fw-500">
+                                <span data-feather="sliders"></span> 筛选
+                            </h6>
+                        </div>
+                        <div class="category_sidebar">
+
+                            <!-- Start: Aside -->
+                            <aside class="product-sidebar-widget mb-30">
+                                <!-- Title -->
+                                <div class="widget_title mb-20">
+                                    <h6>种类</h6>
+                                </div>
+                                <!-- Title -->
+                                <!-- Body -->
+                                <div class="card border-0">
+                                    <div class="product-category">
+                                        <ul>
+                                            {% for navli in data.navlist %}
+                                                <li>
+                                                    <div class="w-100">
+                                                        <a href="/main?type={{ navli }}"
+                                                           class="fs-14 color-gray">{{ navli }} </a>
+                                                    </div>
+                                                </li>
+
+                                            {% endfor %}
+
+
+                                        </ul>
+                                        <div class="mt-2">
+                                            <a href="/main" class=" fs-13 fw-500 text-capitalize">全部产品</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Body -->
+                            </aside>
+                            <!-- End: Aside -->
+
+                        </div>
+                    </div><!-- End: .widget -->
+                </div><!-- End: .columns-1 -->
+                <div class="columns-2 col-lg-8 col-md-7 col-sm-8 order-md-1 order-0">
+                    <div class="tab-content mt-25" id="ap-tabContent">
+                        <div class="tab-pane fade show active" id="ap-overview" role="tabpanel"
+                             aria-labelledby="ap-overview-tab">
+                            <!-- Start: Shop Item -->
+                            <div class="row product-page-list justify-content-center">
+                                {% for foo in data.cplist %}
+                                    <div class="cus-xl-3 col-lg-6 col-md-11 col-12 mb-30 px-10">
+
+                                        <div class="card product product--grid">
+                                            <div class="h-100">
+                                                <div class="product-item">
+                                                    <div class="product-item__image">
+                                                            <span class="like-icon">
+                                                                <button type="button" class="content-center">
+                                                                    <i class="lar la-heart icon"></i>
+                                                                </button>
+                                                            </span>
+                                                        <a href="#"><img class="card-img-top img-fluid"
+                                                                         src="{{ foo.picture }}"
+                                                                         alt="digital-chair" style="height: 400px"></a>
+                                                    </div>
+                                                    <div class="card-body px-20 pb-25 pt-20">
+                                                        <div class="product-item__body text-capitalize">
+                                                            <a href="product-details.html">
+                                                                <h6 class="card-title">{{ foo.pname }}</h6>
+                                                            </a>
+                                                            <div class="d-flex align-items-center mb-10 flex-wrap">
+                                                                <span class="product-desc-price">￥{{ foo.pprice }}</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="product-item__button d-flex mt-20 flex-wrap">
+
+
+                                                            <button class="btn btn-default btn-squared btn-outline-light px-15 ">
+                                                                <span data-feather="shopping-bag"></span>
+                                                                加入购物车
+                                                            </button>
+
+
+                                                            <button class="btn btn-primary btn-default btn-squared border-0 ">
+                                                                购买
+                                                            </button>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                {% endfor %}
+
+
+                            </div>
+                            <!-- End: Shop Item -->
+                        </div>
+                    </div>
+                </div><!-- End: .columns-2 -->
+            </div>
+        </div>
+    </div><!-- End: .products -->
+
+</main>
+<div id="overlayer">
+        <span class="loader-overlay">
+            <div class="atbd-spin-dots spin-lg">
+                <span class="spin-dot badge-dot dot-primary"></span>
+                <span class="spin-dot badge-dot dot-primary"></span>
+                <span class="spin-dot badge-dot dot-primary"></span>
+                <span class="spin-dot badge-dot dot-primary"></span>
+            </div>
+        </span>
+</div>
+<div class="overlay-dark-sidebar"></div>
+
+<!-- inject:js-->
+<script src="../static/assets/vendor_assets/js/jquery/jquery-3.5.1.min.js"></script>
+<script src="../static/assets/vendor_assets/js/jquery/jquery-ui.js"></script>
+<script src="../static/assets/vendor_assets/js/bootstrap/popper.js"></script>
+<script src="../static/assets/vendor_assets/js/bootstrap/bootstrap.min.js"></script>
+<script src="../static/assets/vendor_assets/js/moment/moment.min.js"></script>
+<script src="../static/assets/vendor_assets/js/accordion.js"></script>
+<script src="../static/assets/vendor_assets/js/autoComplete.js"></script>
+<script src="../static/assets/vendor_assets/js/Chart.min.js"></script>
+<script src="../static/assets/vendor_assets/js/charts.js"></script>
+<script src="../static/assets/vendor_assets/js/daterangepicker.js"></script>
+<script src="../static/assets/vendor_assets/js/drawer.js"></script>
+<script src="../static/assets/vendor_assets/js/dynamicBadge.js"></script>
+<script src="../static/assets/vendor_assets/js/dynamicCheckbox.js"></script>
+<script src="../static/assets/vendor_assets/js/feather.min.js"></script>
+<script src="../static/assets/vendor_assets/js/footable.min.js"></script>
+<script src="../static/assets/vendor_assets/js/fullcalendar@5.2.0.js"></script>
+<script src="../static/assets/vendor_assets/js/google-chart.js"></script>
+<script src="../static/assets/vendor_assets/js/jquery-jvectormap-2.0.5.min.js"></script>
+<script src="../static/assets/vendor_assets/js/jquery-jvectormap-world-mill-en.js"></script>
+<script src="../static/assets/vendor_assets/js/jquery.countdown.min.js"></script>
+<script src="../static/assets/vendor_assets/js/jquery.filterizr.min.js"></script>
+<script src="../static/assets/vendor_assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../static/assets/vendor_assets/js/jquery.mCustomScrollbar.min.js"></script>
+<script src="../static/assets/vendor_assets/js/jquery.peity.min.js"></script>
+<script src="../static/assets/vendor_assets/js/jquery.star-rating-svg.min.js"></script>
+<script src="../static/assets/vendor_assets/js/leaflet.js"></script>
+<script src="../static/assets/vendor_assets/js/leaflet.markercluster.js"></script>
+<script src="../static/assets/vendor_assets/js/loader.js"></script>
+<script src="../static/assets/vendor_assets/js/message.js"></script>
+<script src="../static/assets/vendor_assets/js/moment.js"></script>
+<script src="../static/assets/vendor_assets/js/muuri.min.js"></script>
+<script src="../static/assets/vendor_assets/js/notification.js"></script>
+<script src="../static/assets/vendor_assets/js/popover.js"></script>
+<script src="../static/assets/vendor_assets/js/select2.full.min.js"></script>
+<script src="../static/assets/vendor_assets/js/slick.min.js"></script>
+<script src="../static/assets/vendor_assets/js/trumbowyg.min.js"></script>
+<script src="../static/assets/vendor_assets/js/wickedpicker.min.js"></script>
+<script src="../static/assets/theme_assets/js/drag-drop.js"></script>
+<script src="../static/assets/theme_assets/js/footable.js"></script>
+<script src="../static/assets/theme_assets/js/full-calendar.js"></script>
+<script src="../static/assets/theme_assets/js/googlemap-init.js"></script>
+<script src="../static/assets/theme_assets/js/icon-loader.js"></script>
+<script src="../static/assets/theme_assets/js/jvectormap-init.js"></script>
+<script src="../static/assets/theme_assets/js/leaflet-init.js"></script>
+<script src="../static/assets/theme_assets/js/main.js"></script>
+<!-- endinject-->
+
+</body>
+
+</html>

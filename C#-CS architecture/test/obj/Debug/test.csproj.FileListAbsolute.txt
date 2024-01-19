@@ -1,0 +1,13 @@
+C:\Users\Lenovo\Desktop\pinpin\test\bin\Debug\test.exe.config
+C:\Users\Lenovo\Desktop\pinpin\test\bin\Debug\test.exe
+C:\Users\Lenovo\Desktop\pinpin\test\bin\Debug\test.pdb
+C:\Users\Lenovo\Desktop\pinpin\test\obj\Debug\test.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\pinpin\test\obj\Debug\test.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\Desktop\pinpin\test\obj\Debug\test.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\pinpin\test\obj\Debug\test.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\pinpin\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\pinpin\test\obj\Debug\test.exe
+C:\Users\Lenovo\Desktop\pinpin\test\obj\Debug\test.pdb
+C:\Users\Lenovo\Desktop\pinpin\test\obj\Debug\test.frmLogin.resources
+C:\Users\Lenovo\Desktop\pinpin\test\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Lenovo\Desktop\pinpin\test\obj\Debug\test.csproj.CopyComplete
